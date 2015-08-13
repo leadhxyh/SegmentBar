@@ -1,0 +1,2 @@
+# SegmentBar
+SegmentBarView implement ScrollView
