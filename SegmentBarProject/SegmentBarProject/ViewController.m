@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "SegmentBarView.h"
 
 @interface ViewController ()
 
@@ -16,7 +17,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    NSArray *captions = @[@"头条", @"热点",@"体育",@"娱乐",@"本地",@"财经",@"科技",@"直播",@"跟贴",@"历史",@"房产",@"军事",@"国际足球"];
+    SegmentBarView *barView = [[SegmentBarView alloc] initWithFrame:CGRectMake(0, 20, self.view.frame.size.width, 44) andItems:captions];
+    [self.view addSubview:barView];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -14,6 +14,7 @@
 		6690A4B91B7C4D46003DE0D9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6690A4B81B7C4D46003DE0D9 /* Images.xcassets */; };
 		6690A4BC1B7C4D46003DE0D9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6690A4BA1B7C4D46003DE0D9 /* LaunchScreen.xib */; };
 		6690A4C81B7C4D47003DE0D9 /* SegmentBarProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6690A4C71B7C4D47003DE0D9 /* SegmentBarProjectTests.m */; };
+		6690A4D41B7C4FF6003DE0D9 /* SegmentBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6690A4D31B7C4FF6003DE0D9 /* SegmentBarView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		6690A4C11B7C4D46003DE0D9 /* SegmentBarProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SegmentBarProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6690A4C61B7C4D47003DE0D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6690A4C71B7C4D47003DE0D9 /* SegmentBarProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SegmentBarProjectTests.m; sourceTree = "<group>"; };
+		6690A4D21B7C4FF6003DE0D9 /* SegmentBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentBarView.h; sourceTree = "<group>"; };
+		6690A4D31B7C4FF6003DE0D9 /* SegmentBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentBarView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,7 @@
 		6690A4AA1B7C4D46003DE0D9 /* SegmentBarProject */ = {
 			isa = PBXGroup;
 			children = (
+				6690A4D11B7C4FD2003DE0D9 /* SegmentBar */,
 				6690A4AF1B7C4D46003DE0D9 /* AppDelegate.h */,
 				6690A4B01B7C4D46003DE0D9 /* AppDelegate.m */,
 				6690A4B21B7C4D46003DE0D9 /* ViewController.h */,
@@ -117,6 +121,15 @@
 				6690A4C61B7C4D47003DE0D9 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6690A4D11B7C4FD2003DE0D9 /* SegmentBar */ = {
+			isa = PBXGroup;
+			children = (
+				6690A4D21B7C4FF6003DE0D9 /* SegmentBarView.h */,
+				6690A4D31B7C4FF6003DE0D9 /* SegmentBarView.m */,
+			);
+			path = SegmentBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +234,7 @@
 			files = (
 				6690A4B41B7C4D46003DE0D9 /* ViewController.m in Sources */,
 				6690A4B11B7C4D46003DE0D9 /* AppDelegate.m in Sources */,
+				6690A4D41B7C4FF6003DE0D9 /* SegmentBarView.m in Sources */,
 				6690A4AE1B7C4D46003DE0D9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,6 +432,7 @@
 				6690A4CD1B7C4D47003DE0D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6690A4CE1B7C4D47003DE0D9 /* Build configuration list for PBXNativeTarget "SegmentBarProjectTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +441,7 @@
 				6690A4D01B7C4D47003DE0D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
