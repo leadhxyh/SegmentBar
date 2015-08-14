@@ -96,7 +96,25 @@
         
         CGRect lineRC = [self viewWithTag:currentBtn.tag].frame;
         _lineView.frame = CGRectMake(lineRC.origin.x-3, self.frame.size.height - 6, lineRC.size.width + 4, 2);
-        
+        if (lineRC.origin.x - self.contentOffset.x > self.frame.size.width * 2 / 3 ) {
+            NSInteger index = _currentIndex;
+            if (index + 2 < [_segmentArray count]) {
+                index = _currentIndex + 2;
+            } else if (index + 1 < [_segmentArray count]) {
+                index = _currentIndex + 1;
+            }
+            CGRect frame = [self viewWithTag:index + kButtonTagStart].frame;
+            [self scrollRectToVisible:frame animated:YES];
+        } else if (lineRC.origin.x - self.contentOffset.x < self.frame.size.width / 3) {
+            NSInteger index = _currentIndex;
+            if (_currentIndex - 2 >= 0) {
+                index = _currentIndex - 2;
+            } else if (_currentIndex - 1 >= 0) {
+                index = _currentIndex - 1;
+            }
+            CGRect frame = [self viewWithTag:index + kButtonTagStart].frame;
+            [self scrollRectToVisible:frame animated:YES];
+        }
     }
 }
 

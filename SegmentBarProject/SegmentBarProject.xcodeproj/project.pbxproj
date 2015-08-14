@@ -15,6 +15,8 @@
 		6690A4BC1B7C4D46003DE0D9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6690A4BA1B7C4D46003DE0D9 /* LaunchScreen.xib */; };
 		6690A4C81B7C4D47003DE0D9 /* SegmentBarProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6690A4C71B7C4D47003DE0D9 /* SegmentBarProjectTests.m */; };
 		6690A4D41B7C4FF6003DE0D9 /* SegmentBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6690A4D31B7C4FF6003DE0D9 /* SegmentBarView.m */; };
+		66FB4F2A1B7D8CF0003202E8 /* ContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FB4F291B7D8CF0003202E8 /* ContentView.m */; };
+		66FB4F2D1B7DED7E003202E8 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FB4F2C1B7DED7E003202E8 /* NewsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,10 @@
 		6690A4C71B7C4D47003DE0D9 /* SegmentBarProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SegmentBarProjectTests.m; sourceTree = "<group>"; };
 		6690A4D21B7C4FF6003DE0D9 /* SegmentBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentBarView.h; sourceTree = "<group>"; };
 		6690A4D31B7C4FF6003DE0D9 /* SegmentBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentBarView.m; sourceTree = "<group>"; };
+		66FB4F281B7D8CF0003202E8 /* ContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentView.h; sourceTree = "<group>"; };
+		66FB4F291B7D8CF0003202E8 /* ContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentView.m; sourceTree = "<group>"; };
+		66FB4F2B1B7DED7E003202E8 /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
+		66FB4F2C1B7DED7E003202E8 /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +99,8 @@
 				6690A4B81B7C4D46003DE0D9 /* Images.xcassets */,
 				6690A4BA1B7C4D46003DE0D9 /* LaunchScreen.xib */,
 				6690A4AB1B7C4D46003DE0D9 /* Supporting Files */,
+				66FB4F2B1B7DED7E003202E8 /* NewsViewController.h */,
+				66FB4F2C1B7DED7E003202E8 /* NewsViewController.m */,
 			);
 			path = SegmentBarProject;
 			sourceTree = "<group>";
@@ -128,6 +136,8 @@
 			children = (
 				6690A4D21B7C4FF6003DE0D9 /* SegmentBarView.h */,
 				6690A4D31B7C4FF6003DE0D9 /* SegmentBarView.m */,
+				66FB4F281B7D8CF0003202E8 /* ContentView.h */,
+				66FB4F291B7D8CF0003202E8 /* ContentView.m */,
 			);
 			path = SegmentBar;
 			sourceTree = "<group>";
@@ -234,6 +244,8 @@
 			files = (
 				6690A4B41B7C4D46003DE0D9 /* ViewController.m in Sources */,
 				6690A4B11B7C4D46003DE0D9 /* AppDelegate.m in Sources */,
+				66FB4F2A1B7D8CF0003202E8 /* ContentView.m in Sources */,
+				66FB4F2D1B7DED7E003202E8 /* NewsViewController.m in Sources */,
 				6690A4D41B7C4FF6003DE0D9 /* SegmentBarView.m in Sources */,
 				6690A4AE1B7C4D46003DE0D9 /* main.m in Sources */,
 			);
