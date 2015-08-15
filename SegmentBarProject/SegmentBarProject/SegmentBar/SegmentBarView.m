@@ -115,6 +115,10 @@
             CGRect frame = [self viewWithTag:index + kButtonTagStart].frame;
             [self scrollRectToVisible:frame animated:YES];
         }
+        
+        if (self.clickDelegate != nil && [self.clickDelegate respondsToSelector:@selector(barSegmentIndexChanged:)]) {
+            [self.clickDelegate barSegmentIndexChanged:_currentIndex];
+        }
     }
 }
 

@@ -14,6 +14,7 @@
 @interface ViewController ()<SegmentDelegate>
 @property (nonatomic, assign) int currentIndex;
 @property (nonatomic, strong) SegmentBarView *barView;
+@property (nonatomic, strong) ContentView *cv;
 
 @end
 
@@ -24,6 +25,7 @@
     
     NSArray *captions = @[@"头条", @"热点",@"体育",@"娱乐",@"本地",@"财经",@"科技",@"直播",@"跟贴",@"历史",@"房产",@"军事",@"国际足球"];
     _barView = [[SegmentBarView alloc] initWithFrame:CGRectMake(0, 20, self.view.frame.size.width, 44) andItems:captions];
+    _barView.clickDelegate = self;
     [self.view addSubview:_barView];
     
     NewsViewController *vc1 = [[NewsViewController alloc] init];
@@ -66,9 +68,9 @@
     vc13.tag = @"国际足球";
     [self addChildViewController:vc13];
     NSArray *controllers = @[vc1, vc2, vc3, vc4, vc5, vc6, vc7, vc8, vc9, vc10, vc11, vc12, vc13];
-    ContentView *cv = [[ContentView alloc] initWithFrame:CGRectMake(0, 44 + _barView.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height) andControllers:controllers];
-    cv.swipeDelegate = self;
-    [self.view addSubview:cv];
+    _cv = [[ContentView alloc] initWithFrame:CGRectMake(0, 44 + _barView.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height) andControllers:controllers];
+    _cv.swipeDelegate = self;
+    [self.view addSubview:_cv];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -81,6 +83,11 @@
     _currentIndex = segmentIndex;
     [_barView setCurrentSegmentBaeIndex:segmentIndex];
     
+}
+
+- (void)barSegmentIndexChanged:(int)segmentIndex {
+    _currentIndex = segmentIndex;
+    [_cv setCurrentTableViewIndex:segmentIndex];
 }
 
 @end

@@ -15,4 +15,7 @@
 
 - (id)initWithFrame:(CGRect)frame andControllers:(NSArray *)controllers;
 
+/**  设置当前的tableview **/
+- (void)setCurrentTableViewIndex:(int)index;
+
 @end

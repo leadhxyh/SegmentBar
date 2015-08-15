@@ -15,10 +15,13 @@
 @optional
 - (void)contentSelectedSegmentIndexChanged:(int)segmentIndex;
 - (void)scrollOffsetChanged:(CGFloat)offset;
+- (void)barSegmentIndexChanged:(int)index;
 
 @end
 
 @interface SegmentBarView : UIScrollView
+
+@property(nonatomic,unsafe_unretained) id<SegmentDelegate>clickDelegate;
 
 /** 初始化函数 **/
 - (id)initWithFrame:(CGRect)frame andItems:(NSArray *)captions;
