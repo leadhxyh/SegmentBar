@@ -118,4 +118,10 @@
     }
 }
 
+- (void)setCurrentSegmentBaeIndex:(int)index {
+    if (_currentIndex != index) {
+        [self showSelectSegment:index];
+    }
+}
+
 @end

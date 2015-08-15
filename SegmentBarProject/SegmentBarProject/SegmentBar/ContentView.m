@@ -65,4 +65,19 @@
     return cell;
 }
 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    NSLog(@"scrollViewDidScroll");
+    
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    NSLog(@"scrollViewDidEndDecelerating");
+    if (self.swipeDelegate != nil && [self.swipeDelegate respondsToSelector:@selector(contentSelectedSegmentIndexChanged:)]) {
+        int index = _tableView.contentOffset.y / self.frame.size.width;
+        [self.swipeDelegate contentSelectedSegmentIndexChanged:index];
+    }
+}
+
+
+
 @end

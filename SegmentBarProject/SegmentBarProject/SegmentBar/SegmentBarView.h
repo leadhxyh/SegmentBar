@@ -10,9 +10,20 @@
 
 #define RGBCOLOR(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1]
 
+@protocol SegmentDelegate <NSObject>
+
+@optional
+- (void)contentSelectedSegmentIndexChanged:(int)segmentIndex;
+- (void)scrollOffsetChanged:(CGFloat)offset;
+
+@end
+
 @interface SegmentBarView : UIScrollView
 
 /** 初始化函数 **/
 - (id)initWithFrame:(CGRect)frame andItems:(NSArray *)captions;
+
+/** 设置SegmentBar当前位置 **/
+- (void)setCurrentSegmentBaeIndex:(int)index;
 
 @end

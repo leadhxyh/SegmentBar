@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SegmentBarView.h"
 
 @interface ContentView : UIView
+
+@property(nonatomic,unsafe_unretained) id<SegmentDelegate>swipeDelegate;
 
 - (id)initWithFrame:(CGRect)frame andControllers:(NSArray *)controllers;
 
